@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { company } from '../data/content';
 import { scrollToQuoteForm } from '../utils/quote';
+import navbarLogo from "../assets/images/navbar.png";
 
 const links = [
   { to: '/', label: 'Home' },
@@ -21,7 +22,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-[#2D3B4D] bg-[#0B1118]/95 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.28)]">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center py-0" onClick={() => setOpen(false)}>
-          <img src="/src/assets/images/navbar.png" alt="Shiva Fabrication logo" className="ml-6 h-[52px] w-auto object-contain" />
+         <img
+  src={navbarLogo}
+  alt="Shiva Fabrication logo"
+  className="ml-6 h-[52px] w-auto object-contain"
+/>
         </Link>
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
